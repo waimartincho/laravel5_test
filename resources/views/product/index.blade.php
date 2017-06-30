@@ -92,13 +92,13 @@
 
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
+                        <a href="{{ url('product/create') }}" class="btn btn-primary pull-right" style="margin-top:4px;margin-right:5px;">Add</a>
                         <div class="panel panel-default">
                             <div class="panel-heading">
                                 Product List
-                                <a href="{{ url('product/create') }}" class="btn btn-primary pull-right">Add</a>
                             </div>
-                            <div class="clear-div"></div>
                             <div class="panel-body">
+
                                 <table class="table table-hover table-bordered">
                                     <thead>
                                         <th>#</th>
@@ -109,7 +109,7 @@
                                         <th>Use For</th>
                                         <th>Type</th>
                                         <th>Status</th>
-                                        <th colspan="2">Actions</th>
+                                        <th colspan="3">Actions</th>
                                     </thead>
                                     <tbody>
                                         @foreach($products as $data)
@@ -145,6 +145,9 @@
                                             @else
                                                 Disable
                                             @endif
+                                            </td>
+                                            <td>
+                                                <a href="{{ route('product.show', $data->id) }}" class="btn btn-primary">Details</a>
                                             </td>
                                             <td>
                                                 <a href="{{ route('product.edit', $data->id) }}" class="btn btn-primary">Edit</a>

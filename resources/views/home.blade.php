@@ -9,6 +9,7 @@
 
                 <div class="panel-body">
                     You are logged in!
+                    <a href="{{ url('product') }}" class="btn btn-primary pull-right">View Product List</a>
                 </div>
             </div>
         </div>

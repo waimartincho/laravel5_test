@@ -79,8 +79,9 @@ class Product extends Controller
         return redirect()->route('product.index');
     }
 
-    public function show()
+    public function show($id)
     {
-    	
+    	$products = Products::find($id);
+        return view('product.show',array('products'=>$products));
     }
 }
